@@ -1,0 +1,34 @@
+@page "/enrollmentdetail/{id}"
+
+<h3>Show Enrollment</h3>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>
+                CourseID
+            </th>
+            <th>
+                Title
+            </th>
+            <th>
+                Credits
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var erm in Enrollment)
+        {
+            <tr>
+                <td>
+                    @erm.courseID
+                </td>
+                <td>
+                    @erm.title
+                </td>
+                <td>
+                    @erm.credits
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
